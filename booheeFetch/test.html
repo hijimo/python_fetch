@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script
+    type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "a1d178eeb3", "applicationID": "23590140", "transactionName": "JlpaQUsKCF4DEx0DXgpRG0NQABM=", "queueTime": 0, "applicationTime": 29, "agent": "" }</script>
+  <script
+    type="text/javascript">(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "a1d178eeb3", applicationID: "23590140" }; window.NREUM || (NREUM = {}), __nr_require = function (e, n, t) { function r(t) { if (!n[t]) { var i = n[t] = { exports: {} }; e[t][0].call(i.exports, function (n) { var i = e[t][1][n]; return r(i || n) }, i, i.exports) } return n[t].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < t.length; i++)r(t[i]); return r }({ 1: [function (e, n, t) { function r() { } function i(e, n, t) { return function () { return o(e, [u.now()].concat(f(arguments)), n ? null : this, t), n ? void 0 : this } } var o = e("handle"), a = e(4), f = e(5), c = e("ee").get("tracer"), u = e("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", d = l + "ixn-"; a(p, function (e, n) { s[n] = i(l + n, !0, "api") }), s.addPageAction = i(l + "addPageAction", !0), s.setCurrentRouteName = i(l + "routeName", !0), n.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (e, n) { var t = {}, r = this, i = "function" == typeof n; return o(d + "tracer", [u.now(), e, t], r), function () { if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], t), i) try { return n.apply(this, arguments) } catch (e) { throw c.emit("fn-err", [arguments, this, e], t), e } finally { c.emit("fn-end", [u.now()], t) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) { m[n] = i(d + n) }), newrelic.noticeError = function (e, n) { "string" == typeof e && (e = new Error(e)), o("err", [e, u.now(), !1, n]) } }, {}], 2: [function (e, n, t) { function r(e, n) { var t = e.getEntries(); t.forEach(function (e) { "first-paint" === e.name ? c("timing", ["fp", Math.floor(e.startTime)]) : "first-contentful-paint" === e.name && c("timing", ["fcp", Math.floor(e.startTime)]) }) } function i(e, n) { var t = e.getEntries(); t.length > 0 && c("lcp", [t[t.length - 1]]) } function o(e) { if (e instanceof s && !l) { var n, t = Math.round(e.timeStamp); n = t > 1e12 ? Date.now() - t : u.now() - t, l = !0, c("timing", ["fi", t, { type: e.type, fid: n }]) } } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var a, f, c = e("handle"), u = e("loader"), s = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { a = new PerformanceObserver(r), f = new PerformanceObserver(i); try { a.observe({ entryTypes: ["paint"] }), f.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (p) { } } if ("addEventListener" in document) { var l = !1, d = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; d.forEach(function (e) { document.addEventListener(e, o, !1) }) } } }, {}], 3: [function (e, n, t) { function r(e, n) { if (!i) return !1; if (e !== i) return !1; if (!n) return !0; if (!o) return !1; for (var t = o.split("."), r = n.split("."), a = 0; a < r.length; a++)if (r[a] !== t[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var f = navigator.userAgent, c = f.match(a); c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1]) } n.exports = { agent: i, version: o, match: r } }, {}], 4: [function (e, n, t) { function r(e, n) { var t = [], r = "", o = 0; for (r in e) i.call(e, r) && (t[o] = n(r, e[r]), o += 1); return t } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], 5: [function (e, n, t) { function r(e, n, t) { n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0); for (var r = -1, i = t - n || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = e[n + r]; return o } n.exports = r }, {}], 6: [function (e, n, t) { n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (e, n, t) { function r() { } function i(e) { function n(e) { return e && e instanceof r ? e : e ? c(e, f, o) : o() } function t(t, r, i, o) { if (!l.aborted || o) { e && e(t, r, i); for (var a = n(i), f = v(t), c = f.length, u = 0; u < c; u++)f[u].apply(a, r); var p = s[y[t]]; return p && p.push([b, t, r, a]), a } } function d(e, n) { h[e] = v(e).concat(n) } function m(e, n) { var t = h[e]; if (t) for (var r = 0; r < t.length; r++)t[r] === n && t.splice(r, 1) } function v(e) { return h[e] || [] } function g(e) { return p[e] = p[e] || i(t) } function w(e, n) { u(e, function (e, t) { n = n || "feature", y[t] = n, n in s || (s[n] = []) }) } var h = {}, y = {}, b = { on: d, addEventListener: d, removeEventListener: m, emit: t, get: g, listeners: v, context: n, buffer: w, abort: a, aborted: !1 }; return b } function o() { return new r } function a() { (s.api || s.feature) && (l.aborted = !0, s = l.backlog = {}) } var f = "nr@context", c = e("gos"), u = e(4), s = {}, p = {}, l = n.exports = i(); l.backlog = s }, {}], gos: [function (e, n, t) { function r(e, n, t) { if (i.call(e, n)) return e[n]; var r = t(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, n, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return e[n] = r, r } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], handle: [function (e, n, t) { function r(e, n, t, r) { i.buffer([e], r), i.emit(e, n, t) } var i = e("ee").get("handle"); n.exports = r, r.ee = i }, {}], id: [function (e, n, t) { function r(e) { var n = typeof e; return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, o, function () { return i++ }) } var i = 1, o = "nr@id", a = e("gos"); n.exports = r }, {}], loader: [function (e, n, t) { function r() { if (!x++) { var e = E.info = NREUM.info, n = d.getElementsByTagName("script")[0]; if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort(); u(y, function (n, t) { e[n] || (e[n] = t) }), c("mark", ["onload", a() + E.offset], null, "api"); var t = d.createElement("script"); t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n) } } function i() { "complete" === d.readyState && o() } function o() { c("mark", ["domContent", a() + E.offset], null, "api") } function a() { return O.exists && performance.now ? Math.round(performance.now()) : (f = Math.max((new Date).getTime(), f)) - E.offset } var f = (new Date).getTime(), c = e("handle"), u = e(4), s = e("ee"), p = e(3), l = window, d = l.document, m = "addEventListener", v = "attachEvent", g = l.XMLHttpRequest, w = g && g.prototype; NREUM.o = { ST: setTimeout, SI: l.setImmediate, CT: clearTimeout, XHR: g, REQ: l.Request, EV: l.Event, PR: l.Promise, MO: l.MutationObserver }; var h = "" + location, y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1169.min.js" }, b = g && w && w[m] && !/CriOS/.test(navigator.userAgent), E = n.exports = { offset: f, now: a, origin: h, features: {}, xhrWrappable: b, userAgent: p }; e(1), e(2), d[m] ? (d[m]("DOMContentLoaded", o, !1), l[m]("load", r, !1)) : (d[v]("onreadystatechange", i), l[v]("onload", r)), c("mark", ["firstbyte", f], null, "api"); var x = 0, O = e(6) }, {}], "wrap-function": [function (e, n, t) { function r(e) { return !(e && e instanceof Function && e.apply && !e[a]) } var i = e("ee"), o = e(5), a = "nr@original", f = Object.prototype.hasOwnProperty, c = !1; n.exports = function (e, n) { function t(e, n, t, i) { function nrWrapper() { var r, a, f, c; try { a = this, r = o(arguments), f = "function" == typeof t ? t(r, a) : t || {} } catch (u) { l([u, "", [r, a, i], f]) } s(n + "start", [r, a, i], f); try { return c = e.apply(a, r) } catch (p) { throw s(n + "err", [r, a, p], f), p } finally { s(n + "end", [r, a, c], f) } } return r(e) ? e : (n || (n = ""), nrWrapper[a] = e, p(e, nrWrapper), nrWrapper) } function u(e, n, i, o) { i || (i = ""); var a, f, c, u = "-" === i.charAt(0); for (c = 0; c < n.length; c++)f = n[c], a = e[f], r(a) || (e[f] = t(a, u ? f + i : i, o, f)) } function s(t, r, i) { if (!c || n) { var o = c; c = !0; try { e.emit(t, r, i, n) } catch (a) { l([a, t, r, i]) } c = o } } function p(e, n) { if (Object.defineProperty && Object.keys) try { var t = Object.keys(e); return t.forEach(function (t) { Object.defineProperty(n, t, { get: function () { return e[t] }, set: function (n) { return e[t] = n, n } }) }), n } catch (r) { l([r]) } for (var i in e) f.call(e, i) && (n[i] = e[i]); return n } function l(n) { try { e.emit("internal-error", n) } catch (t) { } } return e || (e = i), t.inPlace = u, t.flag = a, t } }, {}] }, {}, ["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>佛手瓜的热量，佛手瓜减肥 - 薄荷食物库</title>
+  <meta name="description" content="全面分析佛手瓜的热量，营养价值，佛手瓜减肥功效，食用效果以及食用注意事项等等，薄荷网食物库提供。" />
+  <meta name="keywords" content="佛手瓜的热量，营养分析，佛手瓜减肥" />
+  <meta name="verify-v1" content="WPvgwdf4aqsujE8987ZHPpBNvtHguD/yT9AaQdi784c=" />
+  <meta name="apple-itunes-app" content="app-id=457856023" />
+  <meta name="mobile-agent" content="format=xhtml;url=http://m.boohee.com">
+
+  <link enablehash="true" href="http://s.boohee.cn/stylesheets/core_v2_0a8b4baac6f2850ce455f7f83db9bc0e.css?1593501582"
+    media="screen" rel="stylesheet" type="text/css" />
+  <link href="//up.boohee.cn/house/u/site/pc/main-v2.css" rel="stylesheet" />
+
+  <link enablehash="true" href="http://s.boohee.cn/stylesheets/food_v2_0a7b4750654e9cbb53b81bf75c08901b.css?1593501582"
+    media="screen" rel="stylesheet" type="text/css" />
+  <style>
+    .container {
+      width: 1200px;
+    }
+  </style>
+
+  <!--[if lt IE 9]>
+  <script src="http://s.boohee.cn/javascripts/v1/ext/html5shiv.min.js"></script>
+  <script src="http://s.boohee.cn/javascripts/v1/ext/respond.min.js"></script>
+  <link href="http://s.boohee.cn/javascripts/v1/ext/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+  <link href="/javascripts/v1/ext/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+  <script src="/javascripts/v1/ext/respond.proxy.js"></script>
+  <![endif]-->
+  <script>
+    var _hmt = _hmt || [];
+    _hmt.push(['_setCustomVar', 1, 'login', '0', 2]);
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?7263598dfd4db0dc29539a51f116b23a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+  <script type="text/javascript">
+    try {
+      window._BH_RESPONSE = {} || {};
+    } catch (e) { }
+  </script>
+  <style>
+    html,
+    body {
+      font: normal normal 100%/normal -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', 'Hiragino Sans GB', 'Source Han Sans CN', 'Source Han Sans SC', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
+    }
+
+    footer {
+      margin-top: 200px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="top">
+
+    </div>
+    <div id="header">
+
+      <div class="page-">
+        <hr class="hide" data-page="about" />
+
+        <header>
+          <div class="clearfix row">
+            <div class="nav-menu">
+              <a href="/" class="no-pl">
+                <i class="logo"></i>
+              </a>
+            </div>
+
+            <nav class="right clearfix nav">
+              <div class="nav-menu ">
+                <a href="/" class="clean-link">
+                  首页
+                  <i class="separator"></i>
+                </a>
+              </div>
+
+              <div class="nav-menu ">
+                <a href="/apps/boohee" class="clean-link">
+                  App
+                  <i class="separator"></i>
+                </a>
+              </div>
+
+              <div class="nav-menu ">
+                <a href="/boohee/members" class="clean-link">
+                  薄荷会员
+                  <i class="separator"></i>
+                </a>
+              </div>
+
+              <div class="nav-menu ">
+                <a href="/boohee/food" class="clean-link">
+                  薄荷食品
+                  <i class="separator"></i>
+                </a>
+
+                <div class="dropdown-menu-container">
+                  <div class="arrow-box popper border arrow-top dropdown-menu animate__fadeInDown">
+                    <div class="">
+                      <a href="/boohee/food#boohee-food-easy-fun" class="clean-link text-center">Easy Fun</a>
+                      <a href="/boohee/food#boohee-food-easy-fan" class="clean-link text-center">Easy Fan</a>
+                      <a href="/boohee/food#boohee-food-easy-ace" class="clean-link text-center">Easy Ace</a>
+                      <a href="/boohee/food#boohee-food-online-shop" class="clean-link text-center">线上商城</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nav-menu "">
+          <a href=" /boohee/channel" class="clean-link">
+                薄荷频道
+                <i class="separator"></i>
+                </a>
+              </div>
+
+              <div class="nav-menu ">
+                <a href="/food" class="clean-link">
+                  热量查询
+                  <i class="separator"></i>
+                </a>
+              </div>
+
+              <div class="nav-menu search">
+                <a href="/search" class="clean-link">
+                  <i class="icon-btn"></i>
+                </a>
+              </div>
+
+              <div class="nav-menu signin">
+                <a href="/profile/login" class="clean-link">
+                  登录
+                </a>
+              </div>
+
+
+            </nav>
+          </div>
+        </header>
+
+        <div class="relative x-adjustable-img text-center food-database-section">
+          <img alt="薄荷" src="http://up.boohee.cn/house/u/site/pc/index/food-database-bg.png" class="xy-center" />
+
+          <div class="xy-center">
+            <h2>超过 50 万种食物数据</h2>
+
+            <div class="y-gutter-15"></div>
+
+            <p>食物营养查询，吃适合的食物</p>
+
+            <div class="y-gutter-120"></div>
+
+            <div class="border-box search">
+              <div class="padding-box left field" style="margin-top: 7px">
+                <div>
+                  <input id="search-ipt" type="text" placeholder="薄荷超全食物热量和营养库，吃前查一查饮食更健康" />
+                </div>
+              </div>
+              <a href="#" class="hide-text text-center clean-link left table btn-search">
+                <span class="cell middle">搜索薄荷</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <div id="main">
+
+        <div class="widget-group-content container">
+          <h2 class="crumb"><a href="/food/">薄荷食物库</a> /
+            <a href="/food/group/4">蔬果和菌藻</a>
+            / 佛手瓜
+          </h2>
+          <div class="crowd-type">
+            <a href="/shiwu_more/foshougua">健身人群</a>
+            <a href="" class="active">一般人群</a>
+          </div>
+          <div class="widget-food-detail pull-left">
+            <h3>佛手瓜的热量和减肥功效</h3>
+            <div class="content">
+              <div class="clearfix">
+
+                <div class="food-pic pull-left">
+                  <a href='http://s2.boohee.cn/house/upload_food/2020/6/22/big_photo_url_big_photo_url_591d348cbaf8ad85ae564911dbab70ee.jpg'
+                    class="lightbox"><img
+                      src='http://s2.boohee.cn/house/upload_food/2020/6/22/mid_photo_url_big_photo_url_591d348cbaf8ad85ae564911dbab70ee.jpg'
+                      alt="佛手瓜" /></a>
+                </div>
+
+                <ul class="basic-infor ">
+                  <li><b>别名：</b>棒瓜、菜肴梨、隼人瓜、安南瓜、肴梨、寿瓜、合掌瓜、万年瓜</li>
+
+                  <li><b>热量：</b><span id="food-calory"><span class="stress red1">18</span>&nbsp;大卡（100克）</span></li>
+
+                  <li><b>分类：</b><strong><a href="/food/group/4">蔬果和菌藻</a></strong></li>
+
+                  <li><b>红绿灯：</b><img
+                      src="http://s2.boohee.cn/food/star/foshougua-cbb0b35387d2929319cf5d33e7c3fc70.png" /></li>
+                </ul>
+              </div>
+              <p>
+                <b>评价：</b>佛手瓜在瓜类蔬菜中营养全面丰富，水分含量高而热量低，推荐在减肥期间食用。
+              </p>
+            </div>
+
+
+
+            <div class="nutr-tag margin10">
+              <h3>营养信息</h3>
+              <div class="content">
+                <dl class="header">
+                  <dd><span class="dt">营养素</span><span class="dd">含量(每100克)</span></dd>
+                  <dd><span class="dt">营养素</span><span class="dd">含量(每100克)</span></dd>
+                </dl>
+                <dl>
+                  <dd><span class="dt">热量(大卡)</span><span class="dd"><span class="stress red1">18.00</span></span></dd>
+                  <dd><span class="dt">碳水化合物(克)</span><span class="dd">3.80</span></dd>
+                </dl>
+                <dl>
+                  <dd><span class="dt">脂肪(克)</span><span class="dd">0.10</span></dd>
+                  <dd><span class="dt">蛋白质(克)</span><span class="dd">1.20</span></dd>
+                </dl>
+                <dl>
+                  <dd class="last"><span class="dt">纤维素(克)</span><span class="dd">1.20</span></dd>
+                </dl>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="widget-relative">
+              <h3>相关食物</h3>
+              <div class="content">
+                <ul class="list">
+                  <li>
+                    <a href="/shiwu/foshougua" target="_blank">
+                      <img
+                        src='http://s2.boohee.cn/house/upload_food/2020/6/22/mid_photo_url_big_photo_url_591d348cbaf8ad85ae564911dbab70ee.jpg'
+                        alt="佛手瓜" />
+                      <span>佛手瓜</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shiwu/liangbanfoshougua" target="_blank">
+                      <img src='http://s2.boohee.cn/house/food_mid/mid_photo_201282014482811547.jpg' alt="凉拌佛手瓜" />
+                      <span>凉拌佛手瓜</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shiwu/foshouguachaojidan" target="_blank">
+                      <img
+                        src='http://s2.boohee.cn/house/upload_food/2016/8/30/mid_photo_url_b3aa3151779648fba2789c1b4bcdfdf0.jpg'
+                        alt="佛手瓜炒鸡蛋" />
+                      <span>佛手瓜炒鸡蛋</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shiwu/qingchaofoshougua" target="_blank">
+                      <img
+                        src='http://s2.boohee.cn/house/upload_food/2019/8/29/mid_photo_url_c58cbaaf2a123115bebb0b84f06a70dc.jpg'
+                        alt="清炒佛手瓜" />
+                      <span>清炒佛手瓜</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/shiwu/fd6845ac" target="_blank">
+                      <span>水煮佛手瓜</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="widget-source">
+              <h3>来源</h3>
+              <p class="source">薄荷</p>
+              <div class="content">
+                <p>更多食物营养成分和营养价值，请点 <a href="/food/">食物热量查询</a></p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="widget-tools-bar widget-left-tools pull-right">
+            <div class="widget-calorie-form item">
+              <img src="http://s.boohee.cn/house/shop/wxfenshi.jpg" style="display:block; width:100%">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div id="footer">
+    </div>
+    <div id="ext">
+
+
+    </div>
+    <script enablehash="true"
+      src="http://s.boohee.cn/javascripts/core_v2_844676abe8d02848ba970b6eec6e00e8.js?1593501582"
+      type="text/javascript"></script>
+
+    <script src="http://s.boohee.cn/javascripts/food_v2_packaged.js?1593501582" type="text/javascript"></script>
+    <script type="text/javascript">
+      ; (function ($) {
+        $("#keyword").placeholder();
+        $(document).ready(function () {
+          $('.btn-search').click(function () {
+            console.log('123321');
+            var data = $('#search-ipt').val();
+            window.location.href = "/food/search?keyword=" + data;
+          })
+        })
+      })(jQuery)
+    </script>
+
+
+
+    <footer class="row">
+      <div class="padding-box footer">
+        <div>
+
+          <div class="flex">
+            <div class="part-left flex socail-medias">
+
+              <a href="#" class="wechat">
+                <div class='arrow-box popper border arrow-top'>
+                  <div class="xy-center">
+                    <img src="http://up.boohee.cn/house/u/site/pc/boohee-qrcode-wechat.png" class="xy-center" />
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://weibo.com/1822042062/profile?topnav=1&wvr=6&is_all=1" class="weibo">
+                <div class='arrow-box popper border arrow-top'>
+                  <div class="xy-center">
+                    <img src="http://up.boohee.cn/house/u/site/pc/boohee-qrcode-weibo.png" class="xy-center" />
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://www.xiaohongshu.com/user/profile/59e9963382ec397c771ccfd1?xhsshare=CopyLink&appuid=59e9963382ec397c771ccfd1&apptime=1574732748"
+                class="red">
+                <div class='arrow-box popper border arrow-top'>
+                  <div class="xy-center">
+                    <img src="http://up.boohee.cn/house/u/site/pc/boohee-qrcode-red.png" class="xy-center" />
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="douyin">
+                <div class='arrow-box popper border arrow-top'>
+                  <div class="xy-center">
+                    <img src="http://up.boohee.cn/house/u/site/pc/douyin-qrcode.png" class="xy-center" />
+                  </div>
+                </div>
+              </a>
+
+              <a href="https://space.bilibili.com/19729246" class="bilibili">
+                <div class='arrow-box popper border arrow-top'>
+                  <div class="xy-center">
+                    <img src="http://up.boohee.cn/house/u/site/pc/boohee-qrcode-bilibili.png" class="xy-center" />
+                  </div>
+                </div>
+              </a>
+
+            </div>
+
+            <div class="text-center part-right flex other-interlinks">
+              <a href="/boohee/cooperation" class="clean-link">商务合作</a>
+              <a href="/boohee/join" class="clean-link">加入薄荷</a>
+              <a href="/boohee/about" class="clean-link">关于薄荷</a>
+              <a href="/boohee/declare" class="clean-link">法律声明</a>
+            </div>
+          </div>
+
+          <div class="certificates">
+            <a href="http://scjgj.sh.gov.cn" class="text-center table clean-link right"><span
+                class="cell middle">上海工商</span></a>
+            <a href="http://www.zx110.org/" class="clean-link right">网络社会<br />征信网</a>
+            <a href="http://www.cyberpolice.cn/wfjb/" class="clean-link right">上海网警<br />网络 110</a>
+            <a href="http://beian.miit.gov.cn/" class="clean-link right">沪 ICP 备<br />06060176号</a>
+          </div>
+
+          <i></i>
+
+          <p class="text-center">
+            版权所有 &#169 2006~2020 薄荷网 boohee.com 沪 ICP 备 06060176 号 增值电信业务经营许可证：沪 B2-20160210 |
+            <a href="#" class="clean-link">营业执照</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="y-gutter-120"></div>
+  </div>
+  <script>
+      (function (w, d, n, a, j) {
+        w[n] = w[n] || function () {
+          (w[n].a = w[n].a || []).push(arguments);
+        };
+        j = d.createElement('script');
+        j.async = true;
+        j.src = 'https://qiyukf.com/script/03b3cf8338d9eab1f52c068c92e38606.js';
+        d.body.appendChild(j);
+      })(window, document, 'ysf');
+  </script>
+
+  <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+
+  <script>
+    (function (w, d, n, a, j) {
+      w[n] = w[n] || function () {
+        (w[n].a = w[n].a || []).push(arguments);
+      };
+      j = d.createElement('script');
+      j.async = true;
+      j.src = 'https://qiyukf.com/script/03b3cf8338d9eab1f52c068c92e38606.js';
+      d.body.appendChild(j);
+    })(window, document, 'ysf');
+  </script>
+
+  <script src="//up.boohee.cn/house/u/site/pc/main.js"></script>
+</body>
+
+</html>

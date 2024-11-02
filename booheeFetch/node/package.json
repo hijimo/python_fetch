@@ -1,0 +1,14 @@
+{
+  "name": "foods",
+  "version": "1.0.0",
+  "description": "食物数据从json上传到mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "orm": "^5.0.5"
+  }
+}
